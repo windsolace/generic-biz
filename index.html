@@ -17,207 +17,52 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 
+        <!-- Angular -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-resource.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js"></script>
+
         <!-- Custom styles for this template -->
         <link href="css/heroic-features.css" rel="stylesheet">
     </head>
-    <body>
+    <body ng-app="app">
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#">Logo</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Price List</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <top-nav></top-nav>
 
-        <!-- Page Content -->
-        <div class="container">
-
-            <!-- Jumbotron Header -->
-            <header class="jumbotron my-4">
-                <h1 class="display-3">Limited Time Promo!</h1>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-                <a href="#" class="btn btn-primary btn-lg">Find out more!</a>
-            </header>
+        <!-- Home Page Content -->
+        <div id="home" class="container" style="display:none">
+            <banner></banner>
 
             <!-- Page Features -->
-            <h2 class="text-center">Our Services</h2>
-            <hr/>
-            <ul class="nav nav-tabs w-100">
-                <li class="nav-item w-50">
-                    <a class="nav-link text-center active" href="#"><h3>Aircon</h3></a>
-                </li>
-                <li class="nav-item w-50">
-                    <a class="nav-link text-center" href="#"><h3>CCTV</h3></a>
-                </li>
-            </ul>
-<br/>
-            <div class="row text-center">
+            <servicestab></servicestab>
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Aircon Repair</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Find Out More!</a>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <!-- /.container -->
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Chemical Cleaning</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Find Out More!</a>
-                        </div>
-                    </div>
-                </div>
+        <!-- Services Listing Content -->
+        <div id="services" class="container">
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">General Aircon Servicing</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Find Out More!</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Page Features -->
+            <servicestab></servicestab>
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Commercial Aircon Servicing</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Find Out More!</a>
-                        </div>
-                    </div>
-                </div>
+        </div>
+        <!-- /.container -->
 
-            </div>
-            <div class="row text-center">
+        <!-- Services Listing Content -->
+        <div id="service-detail" class="container">
 
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Aircon Repair</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Find Out More!</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Chemical Cleaning</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Find Out More!</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">General Aircon Servicing</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Find Out More!</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img class="card-img-top" src="http://placehold.it/500x325" alt="">
-                        <div class="card-body">
-                            <h4 class="card-title">Commercial Aircon Servicing</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="#" class="btn btn-primary">Find Out More!</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- /.row -->
+            <!-- Page Features -->
+            <servicestab></servicestab>
 
         </div>
         <!-- /.container -->
 
         <!-- Footer -->
-        <footer class="py-5 bg-dark">
-            <div class="row ml-2 mr-2">
-                <div class="container w-25">
-                    <h5 class="text-white">Connect with us!</h5>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                </div>
-                <div class="container w-25">
-                    <h5 class="text-white">Contact Us</h5>
-                    <p class="text-muted">Blk 55 Ubi Road 1 <br/>
-                    #99-88 <br/>
-                    Singapore 123055<br/>
-                    (+65) 61234 1234</p>
-                </div>
-                <div class="container w-25">
-                    <h5 class="text-white">About Us</h5>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto</p>
-                    <p class="text-white">Company Copyright © 2018</p>
-                </div>
-            </div>
-                
-            
-            <div class="container">
-                <!-- <p class="m-0 text-white">Copyright &copy; Your Website 2018</p> -->
-            </div>
-            <!-- /.container -->
-        </footer>
+        <myfooter></myfooter>
 
         <!-- Scripts -->
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -235,5 +80,12 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!-- Angular modules -->
+        <script src="app.js"></script>
+        <script src="components/banner/banner.js"></script>
+        <script src="components/footer/footer.js"></script>
+        <script src="components/servicestab/servicestab.js"></script>
+        <script src="components/topnav/topnav.js"></script>
     </body>
 </html>
