@@ -41,7 +41,6 @@ angular.module('servicestab', ['servicedetail'])
 		$http.get("../content/services/ac-repair.html").then(function(response){
 			$scope.selectedServiceObj = $sce.trustAsHtml(response.data);
 			anchorSmoothScroll.scrollTo("svcdetail");
-
 		});
 	}
 

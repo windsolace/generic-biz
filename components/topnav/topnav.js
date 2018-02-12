@@ -12,6 +12,10 @@ module.controller('TopNavCtrl', function ($rootScope, $scope, $timeout) {
 					$rootScope.currentPageName = menuItem.label;
 				}
 			}
+			//only close menu when in mobile mode
+			if(window.innerWidth < 800){
+				$('.navbar-toggler').click();
+			}
 		}, 100);
 	}
 });

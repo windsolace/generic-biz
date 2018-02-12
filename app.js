@@ -15,9 +15,7 @@ module.run(function($rootScope, anchorSmoothScroll){
 
 	$rootScope.menu = [
 		{name: "", label: "Home"},
-		{name: "services", label: "Services"},
-		{name: "svcdetail", label: "Detail"},
-		{name: "about", label: "About Us"}
+		{name: "services", label: "Services"}
 	];
 
 	for(let menuItem of $rootScope.menu){
