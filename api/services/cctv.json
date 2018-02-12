@@ -1,0 +1,19 @@
+{  
+   "serviceList":[  
+      {  
+         "id":"aircon",
+         "name":"Install CCTV",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      },
+      {  
+         "id":"aircon",
+         "name":"Replace CCTV",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      },
+      {  
+         "id":"aircon",
+         "name":"General Maintenance",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      }
+   ]
+}

@@ -1,26 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" ng-controller="TopNavCtrl">
     <div class="container">
-        <a class="navbar-brand" href="#">Log1o</a>
+        <a class="navbar-brand" href="#home">Log1o {{$root.currentPage}}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
+                <li ng-repeat="menuItem in $root.menu">
+                    <a class="nav-link" ng-click="navigate()" href="{{menuItem.name}}">{{menuItem.label}}</a>
+                </li>
+                <li class="dropdown">
+                   <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-link" href="#">Action</a></li>
+                        <li><a class="nav-link" href="#">Another action</a></li>
+                        <li><a class="nav-link" href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a class="nav-link" href="#">Separated link</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home 
                         <span class="sr-only">(current)</span>
                     </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Price List</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
 </nav>
+<breadcrumbs></breadcrumbs>

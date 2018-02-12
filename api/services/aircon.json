@@ -1,0 +1,44 @@
+{  
+   "serviceList":[  
+      {  
+         "id":"ac-repair",
+         "name":"Aircon Repair",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      },
+      {  
+         "id":"chemical-cleaning",
+         "name":"Chemical Cleaning",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      },
+      {  
+         "id":"general-ac-svc",
+         "name":"General Aircon Servicing",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      },
+      {  
+         "id":"commercial-ac-svc",
+         "name":"Commercial Aircon Servicing",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      },
+      {  
+         "id":"aircon",
+         "name":"Aircon Repair",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      },
+      {  
+         "id":"aircon",
+         "name":"Chemical Cleaning",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      },
+      {  
+         "id":"aircon",
+         "name":"General Aircon Servicing",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      },
+      {  
+         "id":"aircon",
+         "name":"Commercial Aircon Servicing",
+         "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat."
+      }
+   ]
+}

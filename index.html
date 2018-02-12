@@ -6,6 +6,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <base href="/">
 
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
@@ -21,20 +22,21 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-resource.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.js"></script>
 
-        <!-- Custom styles for this template -->
-        <link href="css/heroic-features.css" rel="stylesheet">
     </head>
     <body ng-app="app">
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
+        <div id="hiddentop"></div>
+        <button ng-click="topFunction()" id="scrolltotop" title="Go to top">Top</button>
 
-        <!-- Navigation -->
-        <top-nav></top-nav>
+        <!-- Navigation & Breadcrumbs -->
+        <top-nav class=""></top-nav>
 
         <!-- Home Page Content -->
-        <div id="home" class="container" style="display:none">
+        <div id="home" class="container" ng-if="$root.currentPage == ''">
             <banner></banner>
 
             <!-- Page Features -->
@@ -44,20 +46,10 @@
         <!-- /.container -->
 
         <!-- Services Listing Content -->
-        <div id="services" class="container">
+        <div id="services" class="container" ng-if="$root.currentPage == 'services'">
 
             <!-- Page Features -->
             <servicestab></servicestab>
-
-        </div>
-        <!-- /.container -->
-
-        <!-- Services Listing Content -->
-        <div id="service-detail" class="container">
-
-            <!-- Page Features -->
-            <servicestab></servicestab>
-
         </div>
         <!-- /.container -->
 
@@ -67,7 +59,6 @@
         <!-- Scripts -->
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
@@ -84,7 +75,9 @@
         <!-- Angular modules -->
         <script src="app.js"></script>
         <script src="components/banner/banner.js"></script>
+        <script src="components/breadcrumbs/breadcrumbs.js"></script>
         <script src="components/footer/footer.js"></script>
+        <script src="components/servicedetail/servicedetail.js"></script>
         <script src="components/servicestab/servicestab.js"></script>
         <script src="components/topnav/topnav.js"></script>
     </body>
