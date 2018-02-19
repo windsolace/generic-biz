@@ -8,6 +8,9 @@ module.config(function($routeProvider, $locationProvider){
     .when("/services", {
         templateUrl:"templates/services.html"
     })
+    .when("/aboutus", {
+        templateUrl:"templates/aboutus.html"
+    })
     .otherwise({redirectTo:'templates/home.html'});
 });
 
@@ -16,7 +19,8 @@ module.run(function($rootScope, anchorSmoothScroll){
 
 	$rootScope.menu = [
 		{name: "", label: "Home"},
-		{name: "services", label: "Services"}
+		{name: "services", label: "Services"},
+        {name: "aboutus", label: "About Us"}
 	];
 
 	for(let menuItem of $rootScope.menu){
