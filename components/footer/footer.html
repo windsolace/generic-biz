@@ -1,22 +1,25 @@
-<footer class="py-5 bg-dark">
+<footer class="py-5 bg-dark" ng-controller="FooterCtrl">
     <div class="row ml-2 mr-2">
-        <div class="container w-25">
-            <h5 class="text-white">Connect with us!</h5>
+        <div class="container" ng-class="{'w-25': isMobile === false}">
+            <h5 class="text-white">Connect with us! {{isMobile}}</h5>
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-twitter"></a>
+            <hr ng-if="isMobile">
         </div>
-        <div class="container w-25">
+        <div class="container" ng-class="{'w-25': isMobile === false}">
             <h5 class="text-white">Contact Us</h5>
             <p class="text-muted">2 Yishun Industrial Street 1 <br/>
             #06-29 <br/>
             Singapore 768159<br/>
             (+65) 6635 1675<br/>
             hypertechacs@gmail.com</p>
+            <hr ng-if="isMobile">
         </div>
-        <div class="container w-25">
+        <div class="container" ng-class="{'w-25': isMobile === false}">
             <h5 class="text-white">About Us</h5>
             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto</p>
             <p class="text-white">Company Copyright © 2018</p>
+            <hr ng-if="isMobile">
         </div>
     </div>
         

@@ -31,10 +31,8 @@ module.run(function($rootScope, anchorSmoothScroll){
 
 	$rootScope.scrollFunction = function() {
 	    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            console.log(document.documentElement.scrollTop);
 	        document.getElementById("scrolltotop").style.display = "block";
 	    } else {
-            console.log(document.documentElement.scrollTop + " | HIDING");
 	        document.getElementById("scrolltotop").style.display = "none";
 	    }
 	}

@@ -4,6 +4,7 @@ angular.module('servicestab', ['servicedetail'])
 })
 .controller('ServicesTabCtrl', function ($rootScope, $scope, $http, $sce, anchorSmoothScroll) {
 	let API_SERVICE = "/api/services/"
+	$scope.loading = false;
 	$scope.activeItem = "" || "aircon";
 	$scope.activeServiceList = []; //list of either aircon or cctv svc
 	$scope.selectedService = ""; //name of svc detail
@@ -24,7 +25,9 @@ angular.module('servicestab', ['servicedetail'])
 	}
 
 	$scope.getServiceList = function(serviceid){
+		$scope.loading = true;
 		$http.get(API_SERVICE + serviceid + ".json").then(function(response){
+			$scope.loading = false;
 			$scope.activeServiceList = response.data.serviceList;
 		});
 	}

@@ -6,8 +6,9 @@
             <a class="nav-link text-center" ng-click="showServices(service.id)" href="" ng-class="{'active': service.id == activeItem}"><h3>{{service.name}}</h3></a>
         </li>
     </ul>
+    <loader loading="loading"></loader>
     <br/>
-    <div class="row text-center">
+    <div class="row text-center">   
         <div ng-repeat="svcItem in activeServiceList" class="col-lg-3 col-md-6 mb-4">
             <div class="card">
                 <a ng-click="loadDetails(svcItem.id, svcItem.name)" href="#{{svcItem.id}}"><img class="card-img-top" src="http://placehold.it/500x325" alt=""></a>
