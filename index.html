@@ -38,23 +38,9 @@
         <!-- Navigation & Breadcrumbs -->
         <top-nav class=""></top-nav>
 
-        <!-- Home Page Content -->
-        <div id="home" class="container" ng-if="$root.currentPage == ''">
-            <banner></banner>
-
-            <!-- Page Features -->
-            <servicestab></servicestab>
-
+        <div class="container">
+            <div ng-view></div>
         </div>
-        <!-- /.container -->
-
-        <!-- Services Listing Content -->
-        <div id="services" class="container" ng-if="$root.currentPage == 'services'">
-
-            <!-- Page Features -->
-            <servicestab></servicestab>
-        </div>
-        <!-- /.container -->
 
         <!-- Footer -->
         <myfooter></myfooter>

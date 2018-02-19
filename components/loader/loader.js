@@ -4,8 +4,8 @@ module.component('loader', {
 		loading: '<'
 	},
 	controller: function loaderCtrl() {
-		this.$onInit = function(){
-			console.log("init svc id is " +this.loading);
-		}
+		// this.$onInit = function(){
+		// 	console.log("init svc id is " +this.loading);
+		// }
 	}
 });

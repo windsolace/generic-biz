@@ -1,13 +1,14 @@
 var module = angular.module('app',['ngRoute','servicestab']);
 module.config(function($routeProvider, $locationProvider){
-	$locationProvider.html5Mode(true);
+	$locationProvider.html5Mode(true); //removes the hashtag
 	$routeProvider
-	.when("/", {
-		templateUrl:"index.html"
-	});
-
-	// $routeProvider
-	// .otherwise({redirectTo:'/'});
+    .when("/", {
+        templateUrl:"templates/home.html"
+    })
+    .when("/services", {
+        templateUrl:"templates/services.html"
+    })
+    .otherwise({redirectTo:'templates/home.html'});
 });
 
 module.run(function($rootScope, anchorSmoothScroll){
