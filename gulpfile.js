@@ -5,6 +5,8 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify-es').default;
 var pump = require('pump');
 var ngAnnotate = require('gulp-ng-annotate');
+var sass = require('gulp-sass');
+var cleanCSS = require('gulp-clean-css');
 
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
@@ -44,7 +46,22 @@ gulp.task('dev', ['browserSync'], function() {
     gulp.watch('./*.html', browserSync.reload);
 });
 
-//Minify and concat
+//Compile and minify scss
+gulp.task('styles', function () {
+    gulp.src(['css/main.scss', 'components/**/*.scss'])
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(gulp.dest('css/'));
+    gulp.start('css');
+});
+
+//Minify local css assets
+gulp.task('css', function() {
+    return gulp.src('css/*.css')
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest('css/'));
+});
+
+// Minify JS scripts
 gulp.task('scripts', function(cb) {
     pump([ 
         gulp.src('components/**/*.js'),
@@ -53,4 +70,10 @@ gulp.task('scripts', function(cb) {
         uglify(),
         gulp.dest('js/')
         ], cb);
+});
+
+//Minify and concat
+gulp.task('minify', function(cb) {
+    gulp.start('scripts');
+    gulp.start('styles');
 });

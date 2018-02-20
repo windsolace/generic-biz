@@ -4,3 +4,4 @@
 *.scssc
 *.map
 node_modules
+css/*/
