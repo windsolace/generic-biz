@@ -1,6 +1,15 @@
 <!doctype html>
 <html class="no-js" lang="">
     <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114426835-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-114426835-1');
+        </script>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title></title>
@@ -25,7 +34,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-resource.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js"></script>
 
     </head>
     <body ng-app="app">
@@ -49,7 +58,6 @@
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
@@ -63,12 +71,6 @@
 
         <!-- Angular modules -->
         <script src="app.js"></script>
-        <script src="components/banner/banner.js"></script>
-        <script src="components/breadcrumbs/breadcrumbs.js"></script>
-        <script src="components/footer/footer.js"></script>
-        <script src="components/loader/loader.js"></script>
-        <script src="components/servicedetail/servicedetail.js"></script>
-        <script src="components/servicestab/servicestab.js"></script>
-        <script src="components/topnav/topnav.js"></script>
+        <script src="js/main.min.js"></script>
     </body>
 </html>
