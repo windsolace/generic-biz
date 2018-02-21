@@ -2,7 +2,7 @@
 <hr/>
 <div ng-controller="ServicesTabCtrl"> 
     <ul class="nav nav-tabs w-100">
-        <li ng-repeat ="service in services" class="nav-item w-50">
+        <li ng-repeat ="service in serviceTypes" class="nav-item w-50">
             <a class="nav-link text-center" ng-click="showServices(service.id)" href="" ng-class="{'active': service.id == activeItem}"><h3>{{service.name}}</h3></a>
         </li>
     </ul>
@@ -11,7 +11,7 @@
     <div class="row text-center">   
         <div ng-repeat="svcItem in activeServiceList" class="col-lg-3 col-md-6 mb-4">
             <div class="card">
-                <a ng-click="loadDetails(svcItem.id, svcItem.name)" href="#{{svcItem.id}}"><img class="card-img-top" src="http://placehold.it/500x325" alt=""></a>
+                <a ng-click="loadDetails(svcItem.id, svcItem.name)" href="#{{activeItem}}.{{svcItem.id}}"><img class="card-img-top" src="http://placehold.it/500x325" alt=""></a>
 
                 <div class="card-body">
                     <h4 class="card-title">{{svcItem.name}}</h4>
@@ -21,10 +21,9 @@
         </div>
     </div>
     <!-- /.row -->
-
-    <div ng-if="selectedService">
+    <div ng-show="selectedService" id="svcdetail">
         <hr>
-        <h2 id="svcdetail">{{selectedService}}</h2>
+        <h2>{{selectedService}}</h2>
         <hr>
         <servicedetail svccontent="selectedServiceObj"></servicedetail>
     </div>

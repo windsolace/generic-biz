@@ -14,8 +14,9 @@ module.config(function($routeProvider, $locationProvider){
     .otherwise({redirectTo:'templates/home.html'});
 });
 
-module.run(function($rootScope, anchorSmoothScroll){
+module.run(function($rootScope, anchorSmoothScroll, $http){
 	$rootScope.currentPage = window.location.pathname.substring(1) || "";
+    $rootScope.API_SERVICE = "/api/services/";
 
 	$rootScope.menu = [
 		{name: "", label: "Home"},
