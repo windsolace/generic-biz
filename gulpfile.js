@@ -64,7 +64,7 @@ gulp.task('css', function() {
 // Minify JS scripts
 gulp.task('scripts', function(cb) {
     pump([ 
-        gulp.src('components/**/*.js'),
+        gulp.src(['app.js','components/**/*.js', 'js/plugins.js']),
         concat('main.min.js'),
         ngAnnotate(),
         uglify(),
