@@ -16,11 +16,15 @@ angular.module('servicestab', ['servicedetail'])
 	];
 
 	$scope.init = function(){
+		//Load the correct service tab and service list
+		if(window.location.hash){
+	        var hashArr = window.location.hash.replace("#", "").split(".");
+	        $scope.activeItem = hashArr[0] || "aircon";
+	        $scope.selectedServiceId = hashArr[1] || "";
+	    }
 		this.getServiceList(this.activeItem).then(function(serviceList) {
+			//load the correct service details
 			if(window.location.hash){
-		        var hashArr = window.location.hash.replace("#", "").split(".");
-		        $scope.activeItem = hashArr[0] || "aircon";
-		        $scope.selectedServiceId = hashArr[1] || "";
 		        $scope.selectedService = getServiceNameFromList($scope.selectedServiceId, serviceList);
 		        $scope.loadDetails($scope.selectedServiceId, $scope.selectedService);
 		    }

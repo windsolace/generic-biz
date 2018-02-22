@@ -1,8 +1,8 @@
 {
-    "title": "Heroic Features",
-    "name": "startbootstrap-heroic-features",
-    "version": "4.0.0",
-    "description": "An HTML template with a hero heading and feature cards built with Bootstrap",
+    "title": "Hyper Tech Aircon Services",
+    "name": "hypertech-acs",
+    "version": "1.0.0",
+    "description": "Static AngularJS site build",
     "keywords": [
         "css",
         "sass",
@@ -11,19 +11,18 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/template-overviews/heroic-features",
+    "homepage": "https://www.hyperacs.com",
     "bugs": {
-        "url": "https://github.com/BlackrockDigital/startbootstrap-heroic-features/issues",
-        "email": "feedback@startbootstrap.com"
+        "url": "https://github.com/windsolace/generic-biz/issues"
     },
     "license": "MIT",
-    "author": "Start Bootstrap",
+    "author": "Eugene",
     "contributors": [
-        "David Miller (http://davidmiller.io/)"
+        "Eugene Ng"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/BlackrockDigital/startbootstrap-heroic-features.git"
+        "url": "https://github.com/windsolace/generic-biz.git"
     },
     "dependencies": {
         "bootstrap": "4.0.0",
